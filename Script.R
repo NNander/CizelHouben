@@ -29,4 +29,6 @@ library(MacroDatasets)
 
 dir.data='/Users/Nander/Cizel'
 
+vintage <- 0
 
+#Start with scripts Event Study -- CEGR Methodology.R

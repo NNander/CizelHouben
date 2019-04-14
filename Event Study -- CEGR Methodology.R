@@ -1,18 +1,5 @@
 load_all()
 
-require(data.table)
-require(dplyr)
-require(dtplyr)
-require(pipeR)
-require(rlist)
-library(lfe)
-library(gdata)
-library(ggplot2)
-library(pipeR)
-library(rlist)
-library(ggthemes)
-library(imfutils)
-library(BIS)
 
 #Works
 # 'inst/data' 2nd line
@@ -24,9 +11,11 @@ import_data <- function(){
   load(infile)
 }
 
-#Works
+#Works, vintage <- 0
 import_data() ->
   l.events
+
+
 
 country_classification() ->
   ref.ctry
