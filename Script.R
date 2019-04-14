@@ -1,0 +1,32 @@
+#1. Masterscript
+
+setwd('/Users/Nander/Cer')
+getwd()
+
+#Load all libs
+library(data.table)
+library(datasets)
+library(ggplot2)
+library(dyplr)
+library(plyr)
+library(lfe)
+library(gdata)
+library(ggthemes)
+library(pipeR)
+library(rlist)
+library(IMFData)
+library(imfr)
+library(doMC)
+library(rms)
+library(corrplot)
+library(devtools)
+library(imfutils)
+library(pracma)
+library(stringr)
+library(psych)
+library(lubridate)
+library(MacroDatasets)
+
+dir.data='/Users/Nander/Cizel'
+
+
