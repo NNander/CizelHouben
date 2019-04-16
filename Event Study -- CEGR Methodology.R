@@ -15,8 +15,7 @@ import_data <- function(){
 import_data() ->
   l.events
 
-
-
+#does not works yet
 country_classification() ->
   ref.ctry
 
