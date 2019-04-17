@@ -1,9 +1,10 @@
 ##' @import openxlsx readxl pipeR data.table dplyr lubridate
 ##' @export
 prepare_MaP_events <- function(){
-    FILE.XL <- system.file('./data/original/prudential_ind_1.xlsx',
-                           package = 'Projects2016.Macropru')
-
+ #  FILE.XL <- system.file('./data/original/prudential_ind_1.xlsx',
+  #                         package = 'Projects2016.Macropru')
+  
+    FILE.XL <- '/Users/Nander/Desktop/inst-data-original/prudential_ind_1.xlsx'
     read_excel(FILE.XL) %>>%
         data.table %>>%
         mutate(
@@ -40,8 +41,10 @@ prepare_MaP_events <- function(){
 
 ##' @export
 prepare_MaP_events_update <- function(){
-    FILE.XL <- system.file('./data/original/Prudential policy instruments_new/prudential_ind_3.xlsx',
-                           package = 'Projects2016.Macropru')
+#    FILE.XL <- system.file('./data/original/Prudential policy instruments_new/prudential_ind_3.xlsx',
+ #                          package = 'Projects2016.Macropru')
+    
+  FILE.XL <- '/Users/Nander/Desktop/inst-data-original/prudential_ind_3.xlsx'
 
     read_excel(FILE.XL) %>>%
         data.table %>>%
@@ -79,5 +82,4 @@ prepare_MaP_events_update <- function(){
     return(mapevents)
 }
 
-## prepare_MaP_events() ->
-##     events
+prepare_MaP_events() ->   events

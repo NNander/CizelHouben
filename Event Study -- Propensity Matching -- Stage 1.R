@@ -20,11 +20,13 @@ import_data <- function(){
 import_data() ->
   l.events
 
+#does not work 
 country_classification() ->
   ref.ctry
 
 ref.ctry[['All']] <- ref.ctry[['AE_EME.IMF']] %>>% mutate(region = 'All')
 
+#does not work, for same reason as country_classification
 batch_preparation_yxdata() ->
   l.yxdata
 
@@ -130,6 +132,9 @@ l.model[['Bench + Z + Crisis']] <-  c(
 
 require(rms)
 require(corrplot)
+library(multcomp)
+library(metap)
+
 ## EVENT DATABASE
 l.esdata %>>% apply(1,function(row){
   EVENTDB_NAME = row[['eventdb']]

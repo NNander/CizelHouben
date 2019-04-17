@@ -1,21 +1,19 @@
 load_all()
 
-
 #Works
 # 'inst/data' 2nd line
 import_data <- function(){
   infile = file.path("/Users/Nander/Desktop/Cer",
                      sprintf('Event study data.RData',
                              vintage))
-
   load(infile)
 }
 
-#Works, vintage <- 0
-import_data() ->
-  l.events
+#
+#import_data() ->
+ # l.events
 
-#does not works yet
+#does not work 
 country_classification() ->
   ref.ctry
 
@@ -87,8 +85,7 @@ tte_var = 'factor(tte)'
 xvars = l.xvars[[2L]]
 fe = 'factor(date)'
 
-
-#Works
+#Worked (once)
 l.esdata %>>% apply(1,function(row){
   EVENTDB_NAME = row[['eventdb']]
   EVENTDB = row[['eventdb_obj']]

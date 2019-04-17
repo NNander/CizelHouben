@@ -1,7 +1,7 @@
 ##' @export
 event_dataset_preparation <- function(data,ids,date.min = '1995-01-01',date.max = '2016-06-01',pre_qrt = 9, idcol = 'iso3', datecol = 'date', post_qrt = 9, keepcols = "",tte_window = c(-16,12)){
   data %>>%
-    eventstudy::events2dataset(
+    events2dataset(
       ids = ids,
       date.min = date.min,
       date.max = date.max,

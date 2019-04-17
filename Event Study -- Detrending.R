@@ -1,3 +1,5 @@
+#Nander Detrending should be runned before Propensity
+
 load_all()
 
 require(data.table)
@@ -8,13 +10,15 @@ require(rlist)
 require(scales)
 require(pracma)
 
+#Does not work: cannot open compressed file '/Users/Nander/Cizel/dataset_expand_MPI.RData', probable reason 'No such file or directory'
 #country_classification() ->
  # ref.ctry
 
 ref.ctry[['All']] <- ref.ctry[['AE_EME.IMF']] %>>% mutate(region = 'All')
 
-#batch_preparation_yxdata() ->
- # l.yxdata
+#Does not work: cannot open compressed file '/Users/Nander/Cizel/dataset_expand_MPI.RData', probable reason 'No such file or directory'
+batch_preparation_yxdata() ->
+  l.yxdata
 
 #werkt
 imfutils::imfRefCtry() %>>%
@@ -38,6 +42,7 @@ import_data() ->
 
 l.events <- readRDS("~/Desktop/Cer/l.events.rds")
 
+#Does not work: cannot open compressed file '/Users/Nander/Cizel/dataset_expand_MPI.RData', probable reason 'No such file or directory'
 prepare_ydata.oldnew.levels() ->
   ydata
 
@@ -144,7 +149,6 @@ l.depvars <- list(
 )
 
 ycols = l.depvars %>>% unlist %>>% as.character
-
 
 
 ## TOT HIER GEBLEVEN

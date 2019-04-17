@@ -29,7 +29,7 @@ country_classification <- function(){
   ## ------------------------------------------------------------------------ ##
   ## NEW (IMF-BASED) AE/EME CLASSIFICATION                                    ##
   ## ------------------------------------------------------------------------ ##
-  Projects2016.FiscalStress::sample_info()[c('AE','EME')] %>>%
+  sample_info()[c('AE','EME')] %>>%
     rbindlist %>>%
     dplyr::select(iso3,region = group) ->
     ctryclass.imf

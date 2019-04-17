@@ -26,6 +26,12 @@ library(stringr)
 library(psych)
 library(lubridate)
 library(MacroDatasets)
+library(bisutils)
+library(multcomp)
+library(rms)
+library(corrplot)
+
+
 
 dir.data='/Users/Nander/Cizel'
 dir.main='/Users/Nander/Cizel'

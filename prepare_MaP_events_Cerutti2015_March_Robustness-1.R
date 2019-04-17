@@ -1,6 +1,6 @@
 ##' @export
 prepare_MaP_events_Cerutti2015_March_Robustness_1 <- function(){
-  FILE <- c('[PATH TO FILE]/cerutti.RData')
+  FILE <- c('/Users/Nander/Desktop/Cer/cerutti.RData')
   load(FILE)
 
   cerutti %>>%

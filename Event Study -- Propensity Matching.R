@@ -15,6 +15,7 @@ dir.create(dir.output)
 dir.figs = file.path(dir.output,'figures')
 dir.create(dir.figs)
 
+#Does not work --> Missing data 
 country_classification() ->
   ref.ctry
 
