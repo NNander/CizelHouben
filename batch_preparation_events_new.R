@@ -1,3 +1,5 @@
+# delected Projects2016.Macropru::
+
 ##' @export
 batch_preparation_events_new <- function(pre_qrt = 9,
                                          post_qrt = 9){
@@ -23,7 +25,7 @@ batch_preparation_events_new <- function(pre_qrt = 9,
       iso3,date,measure = variable,value
     ) %>>%
     mutate(
-      type = Projects2016.Macropru::classify_price.vs.quantity(measure)
+      type = classify_price.vs.quantity(measure)
     ) ->
     events.new2
 
@@ -83,7 +85,7 @@ batch_preparation_events_new <- function(pre_qrt = 9,
       iso3,date,measure = variable,value
     ) %>>%
     mutate(
-      type = Projects2016.Macropru::classify_price.vs.quantity(measure)
+      type = classify_price.vs.quantity(measure)
     )
 
   eventsnew %>>%
