@@ -2,11 +2,11 @@ load_all()
 
 #Script that loads the eventstudy data and perfroms the eventstudy
 
-dir.data <-"/Users/Nander/CizelHouben"
+dir.data  <-"/Users/Nander/CizelHouben"
 #Works
 # 'inst/data' 2nd line
 import_data <- function(){
-  infile = file.path(dir.data,
+  infile = file.path("/Users/Nander/CizelHouben",
                      sprintf('Event study data.RData',
                              vintage))
   load(infile)

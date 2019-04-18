@@ -46,7 +46,7 @@ l.events <- readRDS("~/Desktop/Cer/l.events.rds")
 prepare_ydata.oldnew.levels() ->
   ydata
 
-#werkt
+#works
 .cleaner <- function(x){
   x %>>%
     (ifelse(is.infinite(.),NA,.)) %>>%
@@ -81,7 +81,7 @@ l.events %>>% list.map({
 ## Transform yseries to cumulative changes around event date (Y_t/Y_0)        ##
 ## -------------------------------------------------------------------------- ##
 
-#Werkt
+#Works
 shift = 0
 
 l.esdata %>>% apply(1, function(row){
@@ -151,7 +151,7 @@ l.depvars <- list(
 ycols = l.depvars %>>% unlist %>>% as.character
 
 
-## TOT HIER GEBLEVEN
+##does not work
 ## DETRENDING OPERATION
 l.esdata %>>% apply(1, function(row){
   esdata.final = row[['esdata_rescaled']]
