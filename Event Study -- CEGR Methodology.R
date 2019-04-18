@@ -1,5 +1,8 @@
 load_all()
 
+#Script that loads the eventstudy data and perfroms the eventstudy
+
+
 #Works
 # 'inst/data' 2nd line
 import_data <- function(){
@@ -20,9 +23,9 @@ country_classification() ->
 #Works
 ref.ctry[['All']] <- ref.ctry[['AE_EME.IMF']] %>>% mutate(region = 'All')
 
-#Does not work
-#batch_preparation_yxdata() ->
- # l.yxdata
+#Does not work for the same reason as country_classification
+batch_preparation_yxdata() ->
+  l.yxdata
 
 #Works
 l.events %>>% list.map({
@@ -85,7 +88,7 @@ tte_var = 'factor(tte)'
 xvars = l.xvars[[2L]]
 fe = 'factor(date)'
 
-#Worked (once)
+#Does notwork
 l.esdata %>>% apply(1,function(row){
   EVENTDB_NAME = row[['eventdb']]
   EVENTDB = row[['eventdb_obj']]
@@ -142,7 +145,7 @@ l.esdata %>>% apply(1,function(row){
                 fe = fe,
                 window = window,
                 shift = shift
-              )}) ->> ES_RESULT
+              )}) -> ES_RESULT
 
               if ('try-error' %in% class(ES_RESULT)){
                 print('try error occured')
